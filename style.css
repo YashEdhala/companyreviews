@@ -1,53 +1,304 @@
-/* Yeswanth code: Additional styling for "Company Insights" section */
+/***********************************
+  Yeswanth code: Global & Reset
+***********************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Container for insights section */
-.company-insights {
-  padding: 3rem 1.5rem;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f0f0f0;
+}
+
+/***********************************
+  Yeswanth code: Navigation Bar
+***********************************/
+.navbar {
+  position: sticky; /* Stays at top when scrolling */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #570A57, #A91079);
+  padding: 0.75rem 1.5rem;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+}
+
+.register-btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #ffbf00;
+  transform: scale(1.05);
+}
+
+/***********************************
+  Yeswanth code: Hero Section
+***********************************/
+.hero-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #A91079, #0A557F);
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ffbf00;
+  transform: scale(1.05);
+}
+
+/***********************************
+  Yeswanth code: Insights Section
+***********************************/
+.insights-section {
   background-color: #fff;
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
-/* Grid layout for multiple companies */
+.insights-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0.5rem auto 2rem auto;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
 .insights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Individual company card styles */
+/* Company card style */
 .insight-card {
   background-color: #f9f9f9;
-  border-radius: 6px;
-  padding: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
   text-align: left;
-  position: relative;
-  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer; /* So users know it's clickable */
 }
 
 .insight-card:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Company name link-like style */
+/* Optional company image */
+.company-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 1rem 1.5rem;
+}
+
 .company-name {
-  margin-bottom: 1rem;
-  cursor: pointer;
-  color: #007bff;
-  transition: color 0.3s;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 600;
 }
 
-.company-name:hover {
-  color: #0056b3;
+.summary-list {
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #444;
 }
 
-/* Hidden details style (default: hidden) */
 .hidden-details {
-  display: none;
-  margin-top: 1rem;
+  display: none; /* Hidden by default */
   background-color: #fff;
-  border-left: 3px solid #ffd700;
-  padding: 1rem;
+  border-top: 2px solid #ffd700;
+  padding: 1rem 1.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/***********************************
+  Yeswanth code: About Section
+***********************************/
+.about-section {
+  background: linear-gradient(135deg, #570A57, #0A557F);
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0.75rem auto;
+  line-height: 1.6;
+}
+
+/***********************************
+  Yeswanth code: Contact Section
+***********************************/
+.contact-section {
+  background-color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  text-align: left;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
   border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact-form button {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ffbf00;
+  transform: scale(1.05);
+}
+
+/***********************************
+  Yeswanth code: Footer
+***********************************/
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #570A57;
+  color: #fff;
 }
