@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>YesRay - Home with Company Insights</title>
-  <!-- Yeswanth code: Linking to external CSS for styling -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>YesRay - Home</title>
+
+  <!-- Yeswanth code: Google Fonts for more modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+  />
+  <!-- Yeswanth code: External CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Yeswanth code: Navigation Bar -->
+  <!-- Yeswanth code: Navigation Bar with gradient -->
   <header>
     <nav class="navbar">
       <div class="logo">YesRay</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#insights">Company Insights</a></li> <!-- Yeswanth code: New link -->
+        <li><a href="#insights">Company Insights</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
@@ -21,55 +28,73 @@
     </nav>
   </header>
 
-  <!-- Yeswanth code: Hero Section (Example) -->
+  <!-- Yeswanth code: Hero Section -->
   <section id="home" class="hero-section">
-    <div class="overlay"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Empower Your Job Search</h1>
-      <p>Supercharge your career with custom resumes, curated listings, and personalized insights.</p>
+      <p>
+        Supercharge your career with custom resumes, curated listings,
+        and personalized insights.
+      </p>
       <button class="cta-btn">Get Started</button>
     </div>
   </section>
 
-  <!-- Yeswanth code: NEW Company Insights Section -->
-  <section id="insights" class="company-insights">
+  <!-- Yeswanth code: Company Insights Section -->
+  <section id="insights" class="insights-section">
     <h2>Company Insights</h2>
-    <p>
+    <p class="section-intro">
       Explore reviews, salaries, and benefits for top companies.  
-      Click on a company name to see more detailed ratings and employee feedback.
+      Click on a company card to see detailed ratings and employee feedback.
     </p>
 
-    <!-- Yeswanth code: Example companies (static data, can be fetched dynamically) -->
     <div class="insights-grid">
-      <!-- Company Card #1 -->
+      <!-- Yeswanth code: Company Card #1 -->
       <article class="insight-card">
-        <h3 class="company-name" data-company="Company A">Company A</h3>
-        <ul>
-          <li><strong>Reviews:</strong> "Great work-life balance, supportive team."</li>
-          <li><strong>Average Salary:</strong> $85,000</li>
-          <li><strong>Benefits:</strong> Health, Dental, 401k</li>
-        </ul>
-        <!-- Hidden details container -->
+        <!-- Optional: add a placeholder image or a company logo -->
+        <img
+          src="https://via.placeholder.com/600x300?text=Company+A+Image"
+          alt="Company A"
+          class="company-image"
+        />
+        <div class="card-content">
+          <h3 class="company-name">Company A</h3>
+          <ul class="summary-list">
+            <li><strong>Reviews:</strong> "Great work-life balance, supportive team."</li>
+            <li><strong>Average Salary:</strong> $85,000</li>
+            <li><strong>Benefits:</strong> Health, Dental, 401k</li>
+          </ul>
+        </div>
         <div class="hidden-details">
           <p><strong>Number of Reviews:</strong> 200+</p>
           <p><strong>Average Rating:</strong> 4.2/5</p>
-          <p>Most employees highlight flexible working hours and career growth opportunities.</p>
+          <p>Employees highlight flexible hours and career growth opportunities.</p>
         </div>
       </article>
 
-      <!-- Company Card #2 -->
+      <!-- Yeswanth code: Company Card #2 -->
       <article class="insight-card">
-        <h3 class="company-name" data-company="Company B">Company B</h3>
-        <ul>
-          <li><strong>Reviews:</strong> "Fast-paced environment, great learning curve."</li>
-          <li><strong>Average Salary:</strong> $95,000</li>
-          <li><strong>Benefits:</strong> Health, Stock Options, Gym Membership</li>
-        </ul>
-        <!-- Hidden details container -->
+        <img
+          src="https://via.placeholder.com/600x300?text=Company+B+Image"
+          alt="Company B"
+          class="company-image"
+        />
+        <div class="card-content">
+          <h3 class="company-name">Company B</h3>
+          <ul class="summary-list">
+            <li><strong>Reviews:</strong> "Fast-paced environment, great learning curve."</li>
+            <li><strong>Average Salary:</strong> $95,000</li>
+            <li><strong>Benefits:</strong> Health, Stock Options, Gym Membership</li>
+          </ul>
+        </div>
         <div class="hidden-details">
           <p><strong>Number of Reviews:</strong> 350+</p>
           <p><strong>Average Rating:</strong> 4.0/5</p>
-          <p>Staff mention challenging projects and generous stock grants as top perks.</p>
+          <p>
+            Staff mention challenging projects and generous stock grants as
+            top perks.
+          </p>
         </div>
       </article>
     </div>
@@ -79,9 +104,14 @@
   <section id="about" class="about-section">
     <h2>About YesRay</h2>
     <p>
-      We’re dedicated to transforming the way you search, apply, and grow in your career. 
-      From automated resume tailoring to real-time job tracking, YesRay is built to help you 
-      find meaningful work and excel in it.
+      We’re dedicated to transforming the way you search, apply, and grow in your career.
+      From automated resume tailoring to real-time job tracking, YesRay is built to help
+      you find meaningful work and excel in it.
+    </p>
+    <p>
+      Our platform integrates modern tech—like AI-driven recommendations—to simplify every
+      step of the application process. Join thousands of job seekers who rely on YesRay to
+      launch their next professional chapter.
     </p>
   </section>
 
@@ -95,10 +125,10 @@
     </p>
     <form class="contact-form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required />
 
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
@@ -112,7 +142,7 @@
     <p>&copy; 2025 YesRay. All rights reserved.</p>
   </footer>
 
-  <!-- Yeswanth code: JavaScript for toggling details -->
+  <!-- Yeswanth code: External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
