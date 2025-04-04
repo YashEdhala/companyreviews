@@ -1,6 +1,6 @@
 /* Yeswanth code: JavaScript for event handling */
 
-// Yeswanth code: Toggle hidden details in Company Insights
+// Toggle hidden details in Company Insights
 document.addEventListener('DOMContentLoaded', () => {
   const insightCards = document.querySelectorAll('.insight-card');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Yeswanth code: "Register/Login" button -> redirect
+// Register/Login Button -> redirect
 const registerBtn = document.querySelector(".register-btn");
 if (registerBtn) {
   registerBtn.addEventListener("click", () => {
@@ -24,7 +24,7 @@ if (registerBtn) {
   });
 }
 
-// Yeswanth code: "Get Started" CTA button in hero
+// "Get Started" CTA button
 const ctaBtn = document.querySelector(".cta-btn");
 if (ctaBtn) {
   ctaBtn.addEventListener("click", () => {
@@ -33,7 +33,7 @@ if (ctaBtn) {
   });
 }
 
-// Yeswanth code: Handle the contact form submission
+// Contact Form Submission
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
