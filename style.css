@@ -1,0 +1,53 @@
+/* Yeswanth code: Additional styling for "Company Insights" section */
+
+/* Container for insights section */
+.company-insights {
+  padding: 3rem 1.5rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Grid layout for multiple companies */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual company card styles */
+.insight-card {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+
+.insight-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Company name link-like style */
+.company-name {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.company-name:hover {
+  color: #0056b3;
+}
+
+/* Hidden details style (default: hidden) */
+.hidden-details {
+  display: none;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-left: 3px solid #ffd700;
+  padding: 1rem;
+  border-radius: 4px;
+}
