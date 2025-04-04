@@ -1,65 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .main-info {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-        }
-        .main-info h1 {
-            margin: 0;
-        }
-        .hobbies, .lewis, .course, .job {
-            background: #e7e7e7;
-            padding: 15px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>YesRay - Home with Company Insights</title>
+  <!-- Yeswanth code: Linking to external CSS for styling -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="main-info">
-            <h1>[Your First and Last Name]</h1>
-            <h1>Preferred Name: [Your Preferred Name]</h1>
-        </header>
+  <!-- Yeswanth code: Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">YesRay</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#insights">Company Insights</a></li> <!-- Yeswanth code: New link -->
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <button class="register-btn">Register/Login</button>
+    </nav>
+  </header>
 
-        <section class="lewis">
-			<h2>Year at Lewis: [Your Years at Lewis]</h2>
-			<h2>Lewis major/minor/concentrations: [Your major/minor/concentrations]</h2>
-			<h2>Reasons for pursuing this degree: [Your reasons for pursuing the degree]</h2>
-        </section>
-
-		<section class="course">
-            <h2>Reasons for Taking This Course</h2>
-            <p>[Your reasons for taking this course]</p>
-        </section>
-
-		<section class="job">
-            <p>Current/Recent Job</p>
-			<p>[Your job responsibilities]</p>
-        </section>		
-
-        <section class="hobbies">
-            <h2>Hobbies and Special Interests</h2>
-            <p>[Your hobbies or special interests]</p>
-        </section>
-
-        <section class="fun-fact">
-            <h2>Fun Fact</h2>
-            <p>[A fun fact about yourself]</p>
-        </section>
+  <!-- Yeswanth code: Hero Section (Example) -->
+  <section id="home" class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Empower Your Job Search</h1>
+      <p>Supercharge your career with custom resumes, curated listings, and personalized insights.</p>
+      <button class="cta-btn">Get Started</button>
     </div>
+  </section>
+
+  <!-- Yeswanth code: NEW Company Insights Section -->
+  <section id="insights" class="company-insights">
+    <h2>Company Insights</h2>
+    <p>
+      Explore reviews, salaries, and benefits for top companies.  
+      Click on a company name to see more detailed ratings and employee feedback.
+    </p>
+
+    <!-- Yeswanth code: Example companies (static data, can be fetched dynamically) -->
+    <div class="insights-grid">
+      <!-- Company Card #1 -->
+      <article class="insight-card">
+        <h3 class="company-name" data-company="Company A">Company A</h3>
+        <ul>
+          <li><strong>Reviews:</strong> "Great work-life balance, supportive team."</li>
+          <li><strong>Average Salary:</strong> $85,000</li>
+          <li><strong>Benefits:</strong> Health, Dental, 401k</li>
+        </ul>
+        <!-- Hidden details container -->
+        <div class="hidden-details">
+          <p><strong>Number of Reviews:</strong> 200+</p>
+          <p><strong>Average Rating:</strong> 4.2/5</p>
+          <p>Most employees highlight flexible working hours and career growth opportunities.</p>
+        </div>
+      </article>
+
+      <!-- Company Card #2 -->
+      <article class="insight-card">
+        <h3 class="company-name" data-company="Company B">Company B</h3>
+        <ul>
+          <li><strong>Reviews:</strong> "Fast-paced environment, great learning curve."</li>
+          <li><strong>Average Salary:</strong> $95,000</li>
+          <li><strong>Benefits:</strong> Health, Stock Options, Gym Membership</li>
+        </ul>
+        <!-- Hidden details container -->
+        <div class="hidden-details">
+          <p><strong>Number of Reviews:</strong> 350+</p>
+          <p><strong>Average Rating:</strong> 4.0/5</p>
+          <p>Staff mention challenging projects and generous stock grants as top perks.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Yeswanth code: About Section -->
+  <section id="about" class="about-section">
+    <h2>About YesRay</h2>
+    <p>
+      We’re dedicated to transforming the way you search, apply, and grow in your career. 
+      From automated resume tailoring to real-time job tracking, YesRay is built to help you 
+      find meaningful work and excel in it.
+    </p>
+  </section>
+
+  <!-- Yeswanth code: Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>
+      Have questions, feedback, or just want to say hello? Our support team is here to help.
+      You can also reach us at
+      <a href="mailto:YeswanthSEdhala@lewisu.edu">YeswanthSEdhala@lewisu.edu</a>.
+    </p>
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Yeswanth code: Footer -->
+  <footer>
+    <p>&copy; 2025 YesRay. All rights reserved.</p>
+  </footer>
+
+  <!-- Yeswanth code: JavaScript for toggling details -->
+  <script src="script.js"></script>
 </body>
 </html>
